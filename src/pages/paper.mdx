@@ -1,18 +1,12 @@
-import { SparkleIcon } from '@/components/SparkleIcon'
-import { generateRssFeed } from '@/lib/generateRssFeed'
+import { LayoutFullPage } from '@/components/LayoutFullPage'
 
-export async function getStaticProps() {
-  if (process.env.NODE_ENV === 'production') {
-    await generateRssFeed()
-  }
-  return { props: {} }
-}
 
----
+
+          <LayoutFullPage>
 
 ## Abstract:
 
- This proposal outlines a collaborative project aimed at creating a comprehensive magnetic resonance imaging (MRI) dataset for advancing artificial intelligence (AI) research in the field of medical imaging. The project aims to collect and curate a diverse and high-quality dataset of MRI scans, which will serve as a valuable resource for training and evaluating AI algorithms. The openly accessible dataset will foster collaboration among researchers, promoting innovation and advancements in AI applications for healthcare.
+We demonstrate the feasibility of applying computer vision techniques to brain mapping using synthetic data exclusively. While the utilization of synthesized training data has been prevalent in various domains, the domain gap between real and synthetic data remains a significant challenge, particularly in the context of brain images. Previous efforts have attempted to address this gap through data mixing, domain adaptation, and domain-adversarial training. However, we present compelling evidence that synthesizing data with minimal domain gap enables models trained on synthetic data to generalize effectively to real-world in-the-wild brain image datasets. In this paper, we outline the methodology of combining a procedurally-generated parametric 3D brain model with an extensive library of carefully crafted assets to render training images with unparalleled realism and diversity. Our machine learning systems are trained on these synthetic brain images, enabling us to accomplish brain-related tasks such as precise landmark localization and brain region segmentation. We demonstrate that synthetic data can achieve comparable accuracy to real data while also enabling novel approaches that would otherwise be infeasible due to the challenges associated with manual labeling in brain mapping studies.
 
 ## Introduction:
 
@@ -93,3 +87,5 @@ S. Faisan, L. Thoraval, J. . -P. Armspach, M. . -N. Metz-Lutz and F. Heitz, “U
 X. Wang et al., “Real-Time Functional Brain Mapping Based on High-Channel-Count, Ultra-Conformal Neural Interface,” 2023 IEEE 36th International Conference on Micro Electro Mechanical Systems (MEMS), Munich, Germany, 2023, pp. 67–70, doi: 10.1109/MEMS49605.2023.10052566.
 
 E. Wood, T. Baltrušaitis, C. Hewitt, S. Dziadzio, M. Johnson, V. Estellers, T. J. Cashman, and J. Shotton, “Fake It Till You Make It: Face analysis in the wild using synthetic data alone,” arXiv:2109.15102 [cs.CV], 2021.
+
+          </LayoutFullPage>

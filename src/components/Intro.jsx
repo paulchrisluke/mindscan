@@ -42,9 +42,10 @@ function TwitterIcon(props) {
 
 function TwitchIcon(props) {
   return (
-    <svg viewBox="0 0 16 16" aria-hidden="true" fill="currentColor" {...props}>
-      <path d="M6.464 0L1.636 4.828v9.091h3.27v1.091h1.09l1.364-1.364h3.636L14.545 9.82V0H6.464zm1.636 8.182v2.727H4.546v-2.727H2.909V6.546h1.637V3.819h1.637v2.727h2.728v1.637z" />
-    </svg>
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitch" viewBox="0 0 16 16">
+  <path d="M3.857 0 1 2.857v10.286h3.429V16l2.857-2.857H9.57L14.714 8V0H3.857zm9.714 7.429-2.285 2.285H9l-2 2v-2H4.429V1.143h9.142v6.286z"/>
+  <path d="M11.857 3.143h-1.143V6.57h1.143V3.143zm-3.143 0H7.571V6.57h1.143V3.143z"/>
+</svg>
   );
 }
 
@@ -57,15 +58,15 @@ export function Intro() {
         </Link>
       </div>
       <h1 className="mt-14 font-display text-4xl/tight font-light text-white">
-        Mindscan - An Open-source MRI Dataset for Advancing AI Research in Brain Mapping
+        Mindscan - Synthetic Brain Images: Bridging the Gap in Brain Mapping with Generative Models
         <span className="text-sky-300"> for Advancing AI Research in Brain Mapping</span>
       </h1>
       <p className="mt-4 text-sm/6 text-gray-300">
-        Mindscan provides an extensive open-source dataset of MRI brain scans, designed to propel the field of artificial intelligence (AI) research in brain mapping. Delve into a vast collection of anonymized brain images, empowering researchers and developers to train cutting-edge AI algorithms for unraveling the complexities of the human mind. Explore, analyze, and contribute to the future of neuroscience with Mindscan, an invaluable resource for AI-driven advancements in brain mapping and understanding.
+      We demonstrate the feasibility of applying computer vision techniques to brain mapping using synthetic data exclusively. While the utilization of synthesized training data has been prevalent in various domains, the domain gap between real and synthetic data remains a significant challenge, particularly in the context of brain images. Previous efforts have attempted to address this gap through data mixing, domain adaptation, and domain-adversarial training. However, we present compelling evidence that synthesizing data with minimal domain gap enables models trained on synthetic data to generalize effectively to real-world in-the-wild brain image datasets. In this paper, we outline the methodology of combining a procedurally-generated parametric 3D brain model with an extensive library of carefully crafted assets to render training images with unparalleled realism and diversity. Our machine learning systems are trained on these synthetic brain images, enabling us to accomplish brain-related tasks such as precise landmark localization and brain region segmentation. We demonstrate that synthetic data can achieve comparable accuracy to real data while also enabling novel approaches that would otherwise be infeasible due to the challenges associated with manual labeling in brain mapping studies.
       </p>
       <SignUpForm />
       <div className="mt-8 flex flex-wrap justify-center gap-x-1 gap-y-3 sm:gap-x-2 lg:justify-start">
-        <IconLink href="/paper.md" icon={BookIcon} className="flex-none">
+        <IconLink href="/paper" icon={BookIcon} className="flex-none">
           Paper
         </IconLink>
         <IconLink href="https://github.com/paulchrisluke/mindscan" icon={GitHubIcon} className="flex-none">
