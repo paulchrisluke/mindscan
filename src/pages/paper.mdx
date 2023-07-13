@@ -1,82 +1,92 @@
-import { LayoutFullPage } from '@/components/LayoutFullPage'
+import { SparkleIcon } from "@/components/SparkleIcon";
+import { generateRssFeed } from "@/lib/generateRssFeed";
 
+export async function getStaticProps() {
+  if (process.env.NODE_ENV === "production") {
+    await generateRssFeed();
+  }
+  return { props: {} };
+}
 
+---
 
-          <LayoutFullPage>
-
-## Abstract:
+## Abstract {{ date: '2023-07-13T00:00Z' }}
 
 We demonstrate the feasibility of applying computer vision techniques to brain mapping using synthetic data exclusively. While the utilization of synthesized training data has been prevalent in various domains, the domain gap between real and synthetic data remains a significant challenge, particularly in the context of brain images. Previous efforts have attempted to address this gap through data mixing, domain adaptation, and domain-adversarial training. However, we present compelling evidence that synthesizing data with minimal domain gap enables models trained on synthetic data to generalize effectively to real-world in-the-wild brain image datasets. In this paper, we outline the methodology of combining a procedurally-generated parametric 3D brain model with an extensive library of carefully crafted assets to render training images with unparalleled realism and diversity. Our machine learning systems are trained on these synthetic brain images, enabling us to accomplish brain-related tasks such as precise landmark localization and brain region segmentation. We demonstrate that synthetic data can achieve comparable accuracy to real data while also enabling novel approaches that would otherwise be infeasible due to the challenges associated with manual labeling in brain mapping studies.
 
-## Introduction:
+---
 
- The field of medical imaging has witnessed significant advancements with the integration of AI technologies. However, the availability of high-quality and well-annotated datasets remains a crucial requirement for training accurate and reliable AI models. This proposal addresses the need for a large-scale MRI dataset, encompassing diverse imaging data and associated annotations, to propel AI research in medical imaging forward.
+## Introduction {{ date: '2023-07-13T00:00Z' }}
 
-## Objectives:
+The field of medical imaging has witnessed significant advancements with the integration of AI technologies. However, the availability of high-quality and well-annotated datasets remains a crucial requirement for training accurate and reliable AI models. This proposal addresses the need for a large-scale MRI dataset, encompassing diverse imaging data and associated annotations, to propel AI research in medical imaging forward.
 
- The primary objectives of this collaborative project are as follows: 
- 
- a) Acquire a large-scale dataset: Collaborate with medical institutions, hospitals, and research centers to collect a substantial number of MRI scans representing various anatomical regions and medical conditions. 
- 
- Additionally, following the principles outlined in Microsoft's research paper on "Fake It Till You Make It: Face analysis in the wild using synthetic data alone" (Wood et al., 2021), we aim to leverage Generative Adversarial Networks (GANs) to generate synthetic, non-identifiable brain scan datasets. By employing GANs, we can create realistic brain scans that preserve the statistical properties and anatomical features of real scans while ensuring the privacy and anonymity of individuals. This approach allows us to advance AI research in brain mapping without compromising the confidentiality of sensitive personal data.
+---
 
- b) Ensure data quality: Implement stringent quality control measures to ensure the acquired scans adhere to high imaging standards, minimizing artifacts and distortions. 
- 
- As MRI scans require specialized expertise for accurate interpretation and evaluation, we will establish a collaborative partnership with experts specializing in MRI scans and brain imaging. This collaboration will involve leveraging their knowledge and experience to perform comprehensive quality checks on the acquired MRI scans. These experts will employ their expertise to assess the scans for any potential artifacts, distortions, or image inconsistencies, ensuring that the dataset meets the highest standards of imaging quality. Additionally, in conjunction with the generated synthetic brain scan datasets mentioned earlier, the experts will perform thorough evaluations to validate the fidelity and accuracy of the synthetic data. By incorporating these expert evaluations, we aim to create a high-quality dataset that can be relied upon for advanced AI research in brain mapping and analysis.
+## Objectives {{ date: '2023-07-13T00:00Z' }}
 
- c) Data annotation and labeling: Engage domain experts to annotate the dataset with relevant clinical information, including anatomical landmarks, abnormalities, and clinical outcomes, enhancing its value for supervised learning and further research applications. 
- 
- d) Ethical considerations: Comply with all necessary ethical guidelines and data privacy regulations to protect patient information, ensuring responsible data handling practices.
+The primary objectives of this collaborative project are as follows:
 
- // bullcitylegalservices.com is a personal friend who specialized in healthcare law. Leverage that resource.
+a) Acquire a large-scale dataset: Collaborate with medical institutions, hospitals, and research centers to collect a substantial number of MRI scans representing various anatomical regions and medical conditions.
+
+Additionally, following the principles outlined in Microsoft's research paper on "Fake It Till You Make It: Face analysis in the wild using synthetic data alone" (Wood et al., 2021), we aim to leverage Generative Adversarial Networks (GANs) to generate synthetic, non-identifiable brain scan datasets. By employing GANs, we can create realistic brain scans that preserve the statistical properties and anatomical features of real scans while ensuring the privacy and anonymity of individuals. This approach allows us to advance AI research in brain mapping without compromising the confidentiality of sensitive personal data.
+
+b) Ensure data quality: Implement stringent quality control measures to ensure the acquired scans adhere to high imaging standards, minimizing artifacts and distortions.
+
+As MRI scans require specialized expertise for accurate interpretation and evaluation, we will establish a collaborative partnership with experts specializing in MRI scans and brain imaging. This collaboration will involve leveraging their knowledge and experience to perform comprehensive quality checks on the acquired MRI scans. These experts will employ their expertise to assess the scans for any potential artifacts, distortions, or image inconsistencies, ensuring that the dataset meets the highest standards of imaging quality. Additionally, in conjunction with the generated synthetic brain scan datasets mentioned earlier, the experts will perform thorough evaluations to validate the fidelity and accuracy of the synthetic data. By incorporating these expert evaluations, we aim to create a high-quality dataset that can be relied upon for advanced AI research in brain mapping and analysis.
+
+c) Data annotation and labeling: Engage domain experts to annotate the dataset with relevant clinical information, including anatomical landmarks, abnormalities, and clinical outcomes, enhancing its value for supervised learning and further research applications.
+
+d) Ethical considerations: Comply with all necessary ethical guidelines and data privacy regulations to protect patient information, ensuring responsible data handling practices.
+
+// bullcitylegalservices.com is a personal friend who specialized in healthcare law. Leverage that resource.
 
 ## Project Implementation:
 
- The project implementation can be divided into the following key phases: 
- 
- a) Partnership establishment: Identify potential collaborators, including academic institutions, hospitals, and research centers, interested in contributing to the dataset creation effort. 
+The project implementation can be divided into the following key phases:
+
+a) Partnership establishment: Identify potential collaborators, including academic institutions, hospitals, and research centers, interested in contributing to the dataset creation effort.
 
 Notably, we have already identified potential collaborators who have expressed their interest in contributing to our initiative. These collaborators include a distinguished doctor specializing in neuroscience and MRI imaging from Seattle, an experienced AI engineer with expertise in machine learning and data analysis from the Netherlands, and a knowledgeable lawyer specializing in privacy and data protection regulations from North Carolina.
 
 We believe that the involvement of such diverse and accomplished professionals will greatly enrich the dataset creation process, bringing valuable insights from different domains. Their collective expertise will contribute to the overall quality and relevance of the dataset, ensuring that it meets the needs and requirements of researchers, developers, and other stakeholders in the field of AI-driven brain mapping.
 
 If you or anyone you know is interested in collaborating with us on this project, please do not hesitate to reach out. We welcome additional partnerships and contributions as we work together to advance the frontiers of AI research in brain mapping and understanding.
- 
- b) Data acquisition: Collaborate with medical imaging departments to secure access to MRI scans obtained from diverse patient populations, covering a wide range of medical conditions and imaging protocols. 
 
- Collaborating with medical imaging departments, particularly through partnerships with hospitals or research groups, presents an ideal avenue for securing access to the necessary volume of MRI scans obtained from diverse patient populations, encompassing a wide range of medical conditions and imaging protocols.
+b) Data acquisition: Collaborate with medical imaging departments to secure access to MRI scans obtained from diverse patient populations, covering a wide range of medical conditions and imaging protocols.
+
+Collaborating with medical imaging departments, particularly through partnerships with hospitals or research groups, presents an ideal avenue for securing access to the necessary volume of MRI scans obtained from diverse patient populations, encompassing a wide range of medical conditions and imaging protocols.
 
 The acquisition of a significant number of MRI scans through traditional means can be a time-consuming endeavor. On average, an MRI scan takes approximately one hour to complete. If we were to conduct six scans per day, six days a week, we would accumulate a considerable amount of data after one year of effort. However, it is important to acknowledge that such an approach would entail substantial costs and logistical challenges, necessitating grant or funding support to sustain the endeavor.
 
 Fortunately, our utilization of Generative Adversarial Networks (GANs) offers a promising alternative. GANs enable us to generate synthetic data, including brain scans, using a limited number of original scans as a training set. By partnering with healthcare providers and leveraging their existing databases, we have the potential to acquire a more extensive dataset that would serve as the foundation for training our GAN models. This collaborative approach, combined with AI techniques, can augment our data acquisition capabilities and overcome the limitations associated with solely relying on independently acquired scans.
 
 By strategically combining real MRI scans with generated data, we can create a robust and diverse dataset that encompasses a broad spectrum of anatomical variations and medical conditions. This hybrid approach strikes a balance between acquiring scans directly and using synthetic data, enabling us to overcome the resource-intensive nature of solely relying on traditional data acquisition methods.
- 
- c) Data curation and annotation: Assemble a multidisciplinary team of experts in medical imaging and AI to meticulously curate and annotate the collected data, ensuring comprehensive and accurate annotations. 
- 
- d) Dataset hosting and accessibility: Explore partnerships with established platforms or repositories known for their robust infrastructure and open-access policies, ensuring wide accessibility to the curated MRI dataset for researchers worldwide.
 
-## Project Impact and Benefits:
+c) Data curation and annotation: Assemble a multidisciplinary team of experts in medical imaging and AI to meticulously curate and annotate the collected data, ensuring comprehensive and accurate annotations.
 
- The anticipated impact and benefits of this project include: 
- 
- a) Advancement of AI research: The availability of a large-scale MRI dataset will enable researchers to develop and evaluate state-of-the-art AI algorithms for critical medical imaging tasks, such as disease detection, segmentation, and classification. 
- 
- b) Collaboration and knowledge sharing: The open nature of the dataset will foster collaboration among researchers, facilitating the exchange of ideas and reproducibility of results, leading to further advancements in the field. 
- 
- c) Improved patient care: AI models trained on the dataset can potentially enhance diagnostic accuracy, support personalized treatment planning, and ultimately improve patient outcomes in the realm of medical imaging.
+d) Dataset hosting and accessibility: Explore partnerships with established platforms or repositories known for their robust infrastructure and open-access policies, ensuring wide accessibility to the curated MRI dataset for researchers worldwide.
+
+## Project Impact and Benefits: {{ date: '2023-07-13T00:00Z' }}
+
+The anticipated impact and benefits of this project include:
+
+a) Advancement of AI research: The availability of a large-scale MRI dataset will enable researchers to develop and evaluate state-of-the-art AI algorithms for critical medical imaging tasks, such as disease detection, segmentation, and classification.
+
+b) Collaboration and knowledge sharing: The open nature of the dataset will foster collaboration among researchers, facilitating the exchange of ideas and reproducibility of results, leading to further advancements in the field.
+
+c) Improved patient care: AI models trained on the dataset can potentially enhance diagnostic accuracy, support personalized treatment planning, and ultimately improve patient outcomes in the realm of medical imaging.
 
 ## Conclusion:
 
- Creating a comprehensive MRI dataset for AI research in medical imaging is crucial to fuel innovation and advancements in the field. This collaborative project aims to collect, curate, and openly provide a diverse and high-quality MRI dataset, facilitating the development of state-of-the-art AI algorithms. We believe this endeavor will significantly contribute to the advancement of AI in healthcare, ultimately improving patient care and outcomes.
+Creating a comprehensive MRI dataset for AI research in medical imaging is crucial to fuel innovation and advancements in the field. This collaborative project aims to collect, curate, and openly provide a diverse and high-quality MRI dataset, facilitating the development of state-of-the-art AI algorithms. We believe this endeavor will significantly contribute to the advancement of AI in healthcare, ultimately improving patient care and outcomes.
 
 ## Keywords:
 
- artificial intelligence, medical imaging, magnetic resonance imaging, dataset, collaborative project
+artificial intelligence, medical imaging, magnetic resonance imaging, dataset, collaborative project
 
 ## Acknowledgments:
 
- Alan Turing
+Alan Turing
 
 ## References:
 
@@ -87,5 +97,3 @@ S. Faisan, L. Thoraval, J. . -P. Armspach, M. . -N. Metz-Lutz and F. Heitz, “U
 X. Wang et al., “Real-Time Functional Brain Mapping Based on High-Channel-Count, Ultra-Conformal Neural Interface,” 2023 IEEE 36th International Conference on Micro Electro Mechanical Systems (MEMS), Munich, Germany, 2023, pp. 67–70, doi: 10.1109/MEMS49605.2023.10052566.
 
 E. Wood, T. Baltrušaitis, C. Hewitt, S. Dziadzio, M. Johnson, V. Estellers, T. J. Cashman, and J. Shotton, “Fake It Till You Make It: Face analysis in the wild using synthetic data alone,” arXiv:2109.15102 [cs.CV], 2021.
-
-          </LayoutFullPage>
