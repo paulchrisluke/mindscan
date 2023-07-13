@@ -85,17 +85,19 @@ export const article = function Article({ id, title, date, children }) {
 
   useEffect(() => {
     let observer = new window.ResizeObserver(() => {
-      let { height } = heightRef.current.getBoundingClientRect()
-      let nextMultipleOf8 = 8 * Math.ceil(height / 8)
-      setHeightAdjustment(nextMultipleOf8 - height)
-    })
+      if (heightRef.current) {
+        let { height } = heightRef.current.getBoundingClientRect();
+        let nextMultipleOf8 = 8 * Math.ceil(height / 8);
+        setHeightAdjustment(nextMultipleOf8 - height);
+      }
+    });
 
-    observer.observe(heightRef.current)
+    observer.observe(heightRef.current);
 
     return () => {
-      observer.disconnect()
+      observer.disconnect();
     }
-  }, [])
+  }, []);
 
   if (isFeed) {
     return (
