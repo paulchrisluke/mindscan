@@ -93,9 +93,6 @@ export function Intro() {
                 <IconLink href="/paper" icon={BookIcon} className="flex-none">
                     Paper
                 </IconLink>
-                <IconLink href="/test" icon={BookIcon} className="flex-none">
-                    Test
-                </IconLink>
                 <IconLink
                     href="https://github.com/paulchrisluke/mindscan"
                     icon={GitHubIcon}
