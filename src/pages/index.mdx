@@ -10,6 +10,18 @@ export async function getStaticProps() {
 
 ---
 
+## Found! MRI datasets and Python conversion libraries {{ date: '2023-06-25T00:00Z' }}
+
+I was able to secure test data using https://www.slicer.org/ . One of the challenges for AI models is dealing with large file types. MRI scans in particular come in a proprietary file type only readable through specific software. In order to create an extensive database for AI training we will need to convert these file types into individual slices of jpgs.
+
+There are a variety of python packages that can help read these file types, including numpy, nibabel, and matplotlib. I am not a strong python programmer and may need to find additional help to program the python package needed to read our test images and convert to jpg.
+
+Once we are able to reliably convert MRI brain scan files into a structured data set of jpgs, we can begin to build our database for testing. 
+
+We were also able to find additional training data available on https://openneuro.org/ thanks to Catzuo on our live stream https://twitch.tv/paulchrisluke. This should provide us a sufficient training data set to use for procedural generation of synthetic datasets ongoing.
+
+---
+
 ## Literature review changes methodology {{ date: '2023-06-07T00:00Z' }}
 
 I met with Rich, a Doctor I met in Amsterdamn during my travels. We have always enjoyed riffing together, and I discussed changes in our approach based on Microsofts paper, "Fake it Till You Make It":
