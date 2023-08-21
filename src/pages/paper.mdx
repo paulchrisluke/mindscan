@@ -10,19 +10,19 @@ export async function getStaticProps() {
 
 ---
 
-## Abstract {{ date: '2023-07-13T00:00Z' }}
-
-We demonstrate the feasibility of applying computer vision techniques to brain mapping using synthetic data exclusively. While the utilization of synthesized training data has been prevalent in various domains, the domain gap between real and synthetic data remains a significant challenge, particularly in the context of brain images. Previous efforts have attempted to address this gap through data mixing, domain adaptation, and domain-adversarial training. However, we present compelling evidence that synthesizing data with minimal domain gap enables models trained on synthetic data to generalize effectively to real-world in-the-wild brain image datasets. In this paper, we outline the methodology of combining a procedurally-generated parametric 3D brain model with an extensive library of carefully crafted assets to render training images with unparalleled realism and diversity. Our machine learning systems are trained on these synthetic brain images, enabling us to accomplish brain-related tasks such as precise landmark localization and brain region segmentation. We demonstrate that synthetic data can achieve comparable accuracy to real data while also enabling novel approaches that would otherwise be infeasible due to the challenges associated with manual labeling in brain mapping studies.
-
----
-
 ## Introduction {{ date: '2023-07-13T00:00Z' }}
 
 The field of medical imaging has witnessed significant advancements with the integration of AI technologies. However, the availability of high-quality and well-annotated datasets remains a crucial requirement for training accurate and reliable AI models. This proposal addresses the need for a large-scale MRI dataset, encompassing diverse imaging data and associated annotations, to propel AI research in medical imaging forward.
 
 ---
 
-## Objectives {{ date: '2023-07-13T00:00Z' }}
+## Research/Study Background {{ date: '2023-07-13T00:00Z' }}
+
+We demonstrate the feasibility of applying computer vision techniques to brain mapping using synthetic data exclusively. While the utilization of synthesized training data has been prevalent in various domains, the domain gap between real and synthetic data remains a significant challenge, particularly in the context of brain images. Previous efforts have attempted to address this gap through data mixing, domain adaptation, and domain-adversarial training. However, we present compelling evidence that synthesizing data with minimal domain gap enables models trained on synthetic data to generalize effectively to real-world in-the-wild brain image datasets. In this paper, we outline the methodology of combining a procedurally-generated parametric 3D brain model with an extensive library of carefully crafted assets to render training images with unparalleled realism and diversity. Our machine learning systems are trained on these synthetic brain images, enabling us to accomplish brain-related tasks such as precise landmark localization and brain region segmentation. We demonstrate that synthetic data can achieve comparable accuracy to real data while also enabling novel approaches that would otherwise be infeasible due to the challenges associated with manual labeling in brain mapping studies.
+
+---
+
+## Aim and Objectives {{ date: '2023-07-13T00:00Z' }}
 
 The primary objectives of this collaborative project are as follows:
 
@@ -38,9 +38,29 @@ c) Data annotation and labeling: Engage domain experts to annotate the dataset w
 
 d) Ethical considerations: Comply with all necessary ethical guidelines and data privacy regulations to protect patient information, ensuring responsible data handling practices.
 
-// bullcitylegalservices.com is a personal friend who specialized in healthcare law. Leverage that resource.
+## Research Questions:
 
-## Project Implementation:
+**Research Question 1:**
+Can AI Models Trained on Synthetic MRI Data Effectively **Generalize to Real-world Brain Images** and Bridge Domain Gaps?
+
+*Exploration into whether AI models, trained on synthetic MRI data generated using GANs, can successfully apply their knowledge to real-world brain images, while accounting for factors like accuracy, robustness, and potential biases.*
+
+**Research Question 2:**
+How Does the **Utility of Procedurally-Generated Synthetic Data** Compare to Traditional Approaches for Training AI in Brain Mapping?
+
+*Investigation into the challenges, benefits, and trade-offs of using procedurally-generated synthetic data versus traditional real data for training AI models in medical imaging, specifically within the realm of brain mapping.*
+
+**Research Question 3:**
+What Role Does **Domain Expertise and Quality Control** Play in Enhancing Data Quality in Synthetic MRI Datasets?
+
+*Assessment of the influence of domain expertise and stringent quality control measures on the reliability and usability of both acquired MRI scans and generated synthetic brain scan datasets, emphasizing the significance of maintaining high imaging standards and validating synthetic data.*
+
+
+
+## Literature Review:
+
+
+## Methodology:
 
 The project implementation can be divided into the following key phases:
 
@@ -66,6 +86,92 @@ c) Data curation and annotation: Assemble a multidisciplinary team of experts in
 
 d) Dataset hosting and accessibility: Explore partnerships with established platforms or repositories known for their robust infrastructure and open-access policies, ensuring wide accessibility to the curated MRI dataset for researchers worldwide.
 
+## Study Limitations: {{ date: '2023-07-13T00:00Z' }}
+
+While this research endeavor seeks to contribute substantially to the field of AI-driven medical imaging, it is important to acknowledge several inherent limitations that may influence the scope and generalizability of the findings. These limitations are essential for contextualizing the results and interpreting their implications accurately.
+
+**1. Limited Availability of High-Quality MRI Data at Scale:**
+
+One of the foremost limitations pertains to the availability of comprehensive and high-quality MRI data on a large scale. Despite concerted efforts to collaborate with medical institutions and research centers, the acquisition of a diverse and extensive MRI dataset encompassing various anatomical regions and medical conditions remains a complex undertaking. The scarcity of meticulously annotated MRI scans for both synthetic and real data hampers the potential to comprehensively address the research questions posed in this study.
+
+**2. Domain Gap in Synthetic Data Realism:**
+
+A significant challenge lies in addressing the domain gap between synthetic and real data. While synthetic data generation techniques, such as GANs, have demonstrated promising outcomes in preserving anatomical features and statistical properties, the inherent divergence in data distributions remains a constraint. Despite our emphasis on minimizing this gap, the extent to which AI models trained on synthetic data can generalize to the intricacies of real-world brain images requires vigilant consideration.
+
+**3. Complexity of Brain Imaging Interpretation:**
+
+The complexity of brain imaging interpretation poses another noteworthy limitation. Expert evaluation and annotation of MRI scans, especially when dealing with intricate anatomical landmarks and abnormalities, are subject to inherent inter-observer variability. Although collaborative efforts with domain experts are incorporated to ensure data quality and consistency, the intricacies of brain image analysis may still introduce nuances that influence the model's performance and potential biases.
+
+**4. Challenges in Clinical Relevance:**
+
+The translation of AI-driven research findings into clinically relevant applications remains a challenge. While AI models trained on synthetic data may demonstrate promising performance within controlled experimental settings, the transition to real clinical scenarios demands rigorous validation and validation. The intricacies of clinical decision-making and the potential impact on patient care must be considered beyond the scope of this study.
+
+In summary, this investigation, while innovative in its approach to AI-driven medical imaging, is not without its limitations. These limitations underscore the complex interplay between data availability, domain adaptation, ethical considerations, and clinical applicability. Acknowledging and addressing these limitations serves as a foundation for future research endeavors, promoting a comprehensive understanding of the implications of AI technologies in the field of medical imaging.
+
+
+## Study Timetable: {{ date: '2023-07-13T00:00Z' }}
+
+- **July 15 - July 21: Project Initiation**
+  - Define research objectives, scope, and research questions.
+  - Establish collaboration with medical institutions and research centers.
+  - Conduct preliminary literature review on AI in medical imaging.
+
+- **July 22 - August 4: Data Collection and Acquisition**
+  - Collaborate with institutions to gather MRI scans and related data.
+  - Begin discussions with experts for data annotation and labeling.
+  - Explore partnerships with GAN experts for synthetic data generation.
+
+- **August 5 - August 18: Synthetic Data Generation Setup**
+  - Finalize GAN methodology for synthetic MRI data generation.
+  - Determine parameters and requirements for generating realistic data.
+  - Begin the process of generating initial synthetic datasets.
+
+- **August 19 - September 1: Data Quality and Expert Collaboration**
+  - Collaborate with MRI experts to assess and improve data quality.
+  - Implement quality control measures and artifact minimization.
+  - Initiate annotation process for acquired and synthetic datasets.
+
+- **September 2 - September 15: Model Training and Evaluation**
+  - Develop AI models using acquired and synthetic datasets.
+  - Perform initial model training and preliminary evaluations.
+  - Analyze performance metrics and identify areas of improvement.
+
+- **September 16 - September 29: Domain Gap and Generalization Analysis**
+  - Investigate the domain gap between synthetic and real data.
+  - Evaluate the generalization capabilities of AI models.
+  - Iterate on model training and domain adaptation techniques.
+
+- **September 30 - October 13: Brain Imaging Complexity Assessment**
+  - Collaborate with experts to assess complex brain imaging interpretations.
+  - Address inter-observer variability and potential biases.
+  - Fine-tune models for intricate anatomical landmarks and abnormalities.
+
+- **October 14 - October 27: Ethical Considerations and Privacy**
+  - Develop ethical guidelines for handling AI-generated medical data.
+  - Ensure compliance with data privacy regulations and ethical standards.
+  - Consult legal experts to validate data handling practices.
+
+- **October 28 - November 10: Clinical Relevance Evaluation**
+  - Assess the feasibility of AI-driven insights in clinical settings.
+  - Collaborate with medical professionals to validate clinical relevance.
+  - Identify potential challenges and benefits of clinical integration.
+
+- **November 11 - November 24: Paper Writing and Analysis**
+  - Begin drafting research paper, including methodology, results, and limitations.
+  - Analyze collected data, performance metrics, and case studies.
+  - Identify key findings and insights for each research question.
+
+- **November 25 - December 8: Conclusion and Finalization**
+  - Summarize research findings and insights.
+  - Discuss implications and contributions to the field.
+  - Finalize paper structure, citations, and references.
+
+- **December 9 - December 15: Paper Review and Submission**
+  - Conduct thorough review and proofreading of the research paper.
+  - Address any remaining edits and improvements.
+  - Submit the completed research paper for publication by December 15.
+
+
 ## Project Impact and Benefits: {{ date: '2023-07-13T00:00Z' }}
 
 The anticipated impact and benefits of this project include:
@@ -76,7 +182,7 @@ b) Collaboration and knowledge sharing: The open nature of the dataset will fost
 
 c) Improved patient care: AI models trained on the dataset can potentially enhance diagnostic accuracy, support personalized treatment planning, and ultimately improve patient outcomes in the realm of medical imaging.
 
-## Conclusion:
+## Summary:
 
 Creating a comprehensive MRI dataset for AI research in medical imaging is crucial to fuel innovation and advancements in the field. This collaborative project aims to collect, curate, and openly provide a diverse and high-quality MRI dataset, facilitating the development of state-of-the-art AI algorithms. We believe this endeavor will significantly contribute to the advancement of AI in healthcare, ultimately improving patient care and outcomes.
 
@@ -84,9 +190,6 @@ Creating a comprehensive MRI dataset for AI research in medical imaging is cruci
 
 artificial intelligence, medical imaging, magnetic resonance imaging, dataset, collaborative project
 
-## Acknowledgments:
-
-Alan Turing
 
 ## References:
 
